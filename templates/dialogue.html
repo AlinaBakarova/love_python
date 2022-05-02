@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<form action="/dialogue" method = "post" class="from-contact">
+    <hl>Ты можешь прислать своим друзьям одну из трех символьных картинок</hl>
+    <p>1 :)</p>
+    <p>2 :(</p>
+    <p>3 ^_^</p>
+    <hl>Чтобы отправить одну из трех картинок, введи в специальное поле соответствующую цифру</hl>
+    <p><label>Handle адресанта: </label> <input type="text" name='name' value="" required />
+    <p><label>Номер картинки: </label> <input type="integer" name='msg' value="" required />
+    <p><input type="submit" value="Отправить" />
+
+</form>
+<p>Диалоги:</p>
+    {% for m in fmenu -%}
+    <hl>{{m}}</hl>
+    {% endfor %}
+{% endblock %}

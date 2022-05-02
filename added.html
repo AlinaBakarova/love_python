@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<form action="/added" method = "post" class="from-contact">
+<hl>Пользователь {{user}} добавлен!</hl>
+<hl>Теперь ты можешь отправлять ему символьные картинки и делиться эмоциями!</hl></form>
+{% endblock %}

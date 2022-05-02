@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<form action="/find" method = "post" class="from-contact">
+    <p><label>Введите имя: </label> <input type="text" name="name" value="" required />
+    <p><input type="submit" value="Найти" />
+</form>
+{% endblock %}

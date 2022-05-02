@@ -1,0 +1,12 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+{{ super() }}
+<form action="/register" method = "post" class="from-contact">
+<p><label>Handle: </label> <input type="text" name="name" value="" required />
+<p><label>Пароль: </label> <input type="password" name="psw" value="" required />
+<p><label>Повтор пароля: </label> <input type="password" name="psw2" value="" required />
+<p><input type="submit" value="Войти" />
+
+</form>
+{% endblock %}
